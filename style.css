@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 10px 4%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+.logo {
+  margin-left: 3%;
+}
+.actionbar {
+  margin-right: 4%;
+}
+nav {
+  min-width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+a{
+  text-decoration: none;
+  color: inherit; 
+}
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  padding: 4px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  border-bottom: 2px solid white;
+  transition: all 0.3s ease;
+}
+.searchbar {
+  height: 35px;
+  min-width: 180px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+#searchcontainer {
+  height: 40px;
+  padding: 5px;
+  padding-left: 18px;
+  background-color: rgb(236, 234, 234);
+  font-style: italic;
+  font-size: 14px;
+  flex-grow: 1;
+  border: 0;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+#searchcontainer::placeholder {
+  color: #888;
+}
+.search {
+  color: #666;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.search:hover {
+  color: crimson;
+}
+.actionbar {
+  display: flex;
+  min-width: 200px;
+  justify-content: space-evenly;
+}
+.actioncontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.actioncontainer:hover {
+  transform: scale(1.1);
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid crimson;
+  color: crimson;
+}
+
+.actionitem {
+  font-size: 12px;
+  color: #444;
+  margin-top: 4px;
+}
+.bannercontainer {
+  position: relative; /* <-- important */
+  width: 100%;
+  /* margin-bottom: 40px; */
+}
+.banner {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  height: 40vh;
+  min-height: 220px;
+  max-height: 420px;
+}
+.text {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 550;
+  padding: 1rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px; /* thoda spacing dena bold feel enhance karega */
+  text-transform: uppercase; /* fashion vibe aayegi */
+}
+.addcart {
+  margin: 10px auto;
+  padding: 9px 15px;
+  /* background-color: rgb(181, 6, 41); */
+  background-color: crimson; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block; 
+  margin-top: auto;
+}
+
+.addcart:hover {
+  background-color: #a30f34; /* darker crimson shade */
+  box-shadow: 0 6px 14px rgba(142, 80, 92, 0.1);
+  transform: translateY(-1px);
+}
+.categorybox {
+  text-align: center;
+  margin: 15px;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.categorybox:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.categorybox img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.categoryitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.categoryname {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+.headings {
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+.headings::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: crimson;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+.arrivalbox {
+  text-align: center;
+  margin: 15px;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  
+   display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 text aur button dono center */
+  justify-content: flex-start;
+  height: 355px; /* equal height ke liye */
+}
+
+.arrivalbox:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.arrivalbox img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.arrivalitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.arrivalname {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+.footerbottom {
+  color: #aaa;
+  text-align: center;
+  font-size: 13px;
+  padding: 15px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+}
+footer {
+  background-color: #111;
+  color: #eee;
+  padding: 40px 20px;
+  margin-top: 140px;
+}
+.footercontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footercol {
+  flex: 1; /*Equal width cols*/
+  margin: 10px;
+  font-size: 14px;
+  text-align: center;
+  min-width: 220px;
+}
+.footercol h3 {
+  margin-bottom: 13px;
+  margin-top: 8px;
+  font-size: 18px;
+  color: #f4b400;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px; /* thoda highlight color */
+}
+.footercol p {
+  line-height: 1.6;
+  color: #bbb;
+}
+.footercol ul {
+  padding: 0;
+}
+.footercol ul li {
+  list-style: none;
+  margin: 8px 0;
+}
+.footercol ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.footercol ul li a:hover {
+  color: #f4b400;
+  padding-left: 5px;
+}
+#count{
+  background-color: crimson;
+  height: 20px;
+  width: 20px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  padding: 1px 0;
+  font-weight: 500;
+  position: relative;
+  top: -48px;
+  left: 15px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    min-width: auto;
+    gap: 10px;
+  }
+  .searchbar {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  .footercontainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .categoryitems,
+  .arrivalitems {
+    justify-content: center;
+    gap: 15px;
+  }
+  .banner {
+    height: 30vh;
+    min-height: 180px;
+  }
+  .text {
+    font-size: 24px;
+  }
+}
